@@ -1,0 +1,19 @@
+{
+  "name": "armaghan-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Armaghan Store - kapra / fabric boutique storefront. Next.js static export, GitHub Pages ready, WhatsApp ordering, no database.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "test": "node scripts/run-smoke.mjs",
+    "preview": "npx --yes serve@14 out -l 3000",
+    "e2e": "node scripts/e2e.mjs",
+    "test:seo": "node scripts/seo-check.mjs"
+  },
+  "dependencies": {
+    "next": "^14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

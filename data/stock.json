@@ -1,0 +1,5 @@
+{
+  "_comment": "OPTIONAL stock override file. Replace this file with the stock.json you download from /admin. Any SKU listed here wins over the stock grid in data/products.js; SKUs that are not listed keep using the grid. An empty 'variants' object means 'use data/products.js for everything'.",
+  "_format": "variants: { \"<product-slug>--c<colourIndex>s<sizeIndex>\": piecesAvailable }",
+  "variants": {}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Armaghan Store — Kapra & Fabric",
+  "short_name": "Armaghan Store",
+  "description": "Kapra, fabric, stitched suits and accessories from Vihari, Punjab. Live colour-wise stock and WhatsApp ordering, delivered across Pakistan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#123c34",
+  "lang": "en-PK",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
