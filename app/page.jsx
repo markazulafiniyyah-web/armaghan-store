@@ -1,215 +1,225 @@
 import Link from 'next/link';
 import ShopGrid from '@/components/ShopGrid';
 import BulkOffer from '@/components/BulkOffer';
+import HeroSlider from '@/components/HeroSlider';
+import ContactForm from '@/components/ContactForm';
 import JsonLd from '@/components/JsonLd';
-import { products } from '@/lib/products';
+import ProductCard from '@/components/ProductCard';
+import { products, categorySlug } from '@/lib/products';
 import { site } from '@/data/site';
-import { discountPercent, formatPKR, waLink } from '@/lib/format';
-import { buildMetadata, KEYWORDS, SITE_ORIGIN } from '@/lib/seo';
+import { asset, formatPKR, waLink } from '@/lib/format';
+import { buildMetadata, KEYWORDS } from '@/lib/seo';
 import { itemListSchema } from '@/lib/schema';
-import { categories, categorySlug, productsInCategory } from '@/lib/products';
-
-const bulkTiers = [...(site.bulkTiers || [])].sort((a, b) => a.qty - b.qty);
+import { SITE_ORIGIN } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/',
-  title: `Kapra & Fabric Shop in ${site.city} — Order on WhatsApp`,
-  description: `Buy kapra online from ${site.name}: unstitched suits, china boski, khaddar, lawn, stitched kurtas and kidswear. Live colour and size stock, 5–15% off on bulk orders, Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
+  title: `Wholesale Fabric Supplier in ${site.city} — Roman Bosky, Patal Cotton & More`,
+  description: `Buy kapra online from ${site.name} (${site.arabicName}) — Roman Bosky from Rs 1,599, 3-suit bundle Rs 4,500, Patal Cotton, original China Silk Bosky, wash & wear and ladies collection. Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
   keywords: KEYWORDS.home,
 });
 
-const TRUST = [
+const COLLECTION_TILES = [
+  { category: 'Roman Bosky', image: '/products/roman-bosky-1.jpg', note: 'From Rs 1,599 · 60+ colours' },
+  { category: 'Bundles & Deals', image: '/hero/slide-bosky.jpg', note: '2 suits Rs 3,100 · 3 Rs 4,500 · 4 Rs 5,900' },
+  { category: 'Cotton Suiting', image: '/products/patal-cotton-1.jpg', note: 'Patal Cotton · Alpine · Khaddar' },
+  { category: 'Wash & Wear', image: '/products/royal-wash-n-wear-1.jpg', note: 'Shahi Toyobo & Royal wash & wear' },
+  { category: 'Ladies Collection', image: '/products/embroidered-bosky-1.jpg', note: 'Lawn, cambric & hand embroidery' },
+  { category: 'Boski & Silk', image: '/products/china-silk-1.jpg', note: 'China Bosky 12 pound & China Silk' },
+];
+
+const USP = [
   {
-    icon: '🧵',
-    title: 'Real shelf stock',
-    text: 'Every colour and size is counted separately, so sold-out pieces cannot be ordered by mistake.',
+    icon: '🚚',
+    title: 'Cash on Delivery',
+    text: 'COD available all over Pakistan — pay when the parcel arrives.',
+  },
+  {
+    icon: '✅',
+    title: '100% Guaranteed Original',
+    text: 'Original China Silk, Roman Bosky and pure Patal cotton — no copies.',
   },
   {
     icon: '💬',
-    title: 'Order on WhatsApp',
-    text: 'Your cart writes the whole order into a WhatsApp message — we confirm it personally before packing.',
+    title: '24/7 WhatsApp Support',
+    text: `Message ${site.phoneDisplay} for shade cards, stock and orders.`,
   },
   {
-    icon: '🚚',
-    title: 'Posted anywhere in Pakistan',
-    text: `Courier delivery in 2–5 days. Free over ${formatPKR(site.freeDeliveryOver)}, Cash on Delivery available.`,
-  },
-  {
-    icon: '↩️',
-    title: `${site.refundWindowDays}-day returns`,
-    text: `Unused goods can be returned — refunds are paid after a ${site.refundCutPercent}% deduction. Full policy in one click.`,
+    icon: '📦',
+    title: 'Nationwide Delivery',
+    text: `2–5 working days via courier. Free over ${formatPKR(site.freeDeliveryOver)}.`,
   },
 ];
 
 export default function HomePage() {
-  const featured = products.filter((p) => p.featured).slice(0, 3);
-  const bestDeal = [...products]
-    .map((p) => ({ p, off: discountPercent(p.price, p.compareAtPrice) }))
-    .sort((a, b) => b.off - a.off)[0];
+  const hotSelling = products.filter((p) => p.featured).slice(0, 8);
 
   return (
     <>
       <JsonLd id="ld-home-products" data={itemListSchema(products, SITE_ORIGIN, 'Kapra & fabric')} />
 
-      {/* ------------------------------- hero ------------------------------- */}
-      <section className="hero">
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <span className="eyebrow">Kapra · Fabric · Stitching — {site.city}</span>
-            <h1>
-              Fabric that feels right,
-              <br />
-              prices that stay honest.
-            </h1>
-            <p className="lede">
-              {site.name} is a family-run fabric shop run by {site.owner}. Choose your colour and size, and we hold
-              the exact pieces you picked — then send your order straight to our WhatsApp.
-            </p>
-            <div className="btn-row">
-              <Link className="btn btn-primary btn-lg" href="#shop">
-                Browse the shop
-              </Link>
-              <a
-                className="btn btn-wa btn-lg"
-                href={waLink(
-                  `Assalam o Alaikum ${site.name}! I would like to ask about your fabric stock and prices.`,
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp {site.phoneDisplay}
-              </a>
-            </div>
-            <ul className="hero-points">
-              <li>
-                Up to {bulkTiers[bulkTiers.length - 1].percent}% off on bulk orders
-              </li>
-              <li>Live colour-wise stock</li>
-              <li>Cash on Delivery</li>
-              <li>Wholesale rates on request</li>
-            </ul>
-          </div>
+      {/* ------------------------------- hero slider ------------------------------ */}
+      <HeroSlider />
 
-          <div className="hero-art" aria-hidden="true">
-            <div className="swatch-stack">
-              <span className="swatch-slab slab-1">
-                <em>Khaddar</em>
+      {/* ---------------------------------- USP ---------------------------------- */}
+      <section className="usp" aria-label="Why shop with us">
+        <div className="container usp-grid">
+          {USP.map((u) => (
+            <div className="usp-item" key={u.title}>
+              <span className="usp-icon" aria-hidden="true">
+                {u.icon}
               </span>
-              <span className="swatch-slab slab-2">
-                <em>Lawn</em>
-              </span>
-              <span className="swatch-slab slab-3">
-                <em>Shirting</em>
-              </span>
-              <span className="swatch-slab slab-4">
-                <em>Cambric</em>
-              </span>
+              <div>
+                <strong>{u.title}</strong>
+                <p>{u.text}</p>
+              </div>
             </div>
-            <div className="hero-tag">
-              {bestDeal && bestDeal.off > 0 ? (
-                <>
-                  <strong>{bestDeal.off}% off</strong>
-                  <span>{bestDeal.p.name}</span>
-                </>
-              ) : (
-                <>
-                  <strong>Fresh lot</strong>
-                  <span>New fabrics in the shop</span>
-                </>
-              )}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* ------------------------------ trust ------------------------------ */}
-      <section className="container trust">
-        {TRUST.map((t) => (
-          <div className="trust-item" key={t.title}>
-            <span className="trust-icon" aria-hidden="true">
-              {t.icon}
-            </span>
-            <div>
-              <strong>{t.title}</strong>
-              <p>{t.text}</p>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* --------------------------- bulk offer ---------------------------- */}
-      <section className="container section" id="bulk">
-        <BulkOffer />
-      </section>
-
-      {/* ---------------------------- featured ----------------------------- */}
-      {featured.length ? (
-        <section className="container section">
-          <div className="section-head">
-            <div>
-              <h2 className="section-title">Featured this week</h2>
-              <p className="section-sub">Hand-picked from the front shelf — the pieces people ask for most.</p>
-            </div>
-          </div>
-          <div className="grid featured-grid">
-            {featured.map((p) => (
-              <Link className="feature-tile" href={`/products/${p.slug}`} key={p.slug}>
-                <span className="feature-tag">{p.badge || 'Featured'}</span>
-                <strong>{p.name}</strong>
-                <span className="muted small">{p.fabric}</span>
-                <span className="feature-price">{formatPKR(p.price)}</span>
-                <span className="feature-cta">Choose colour &amp; size →</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      {/* --------------------------- collections --------------------------- */}
-      <section className="container section">
+      {/* ------------------------------- collections ------------------------------ */}
+      <section className="container section" id="collections">
         <div className="section-head">
           <div>
-            <h2 className="section-title">Shop by collection</h2>
-            <p className="section-sub">Fabric and ready-made pieces, grouped the way you would ask for them in the shop.</p>
+            <h2 className="section-title">Collections</h2>
+            <p className="section-sub">Browse the shop the way you would ask for it across the counter.</p>
           </div>
+          <Link className="btn btn-outline" href="/#shop">
+            View all products
+          </Link>
         </div>
         <div className="collection-grid">
-          {categories.map((c) => (
-            <Link key={c} href={`/collection/${categorySlug(c)}/`} className="collection-tile">
-              <strong>{c}</strong>
-              <span className="muted small">{productsInCategory(c).length} items →</span>
+          {COLLECTION_TILES.map((tile) => (
+            <Link key={tile.category} href={`/collection/${categorySlug(tile.category)}/`} className="collection-tile">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="collection-photo" src={asset(tile.image)} alt={tile.category} />
+              <span className="collection-scrim" />
+              <span className="collection-info">
+                <strong>{tile.category}</strong>
+                <span>{tile.note}</span>
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* ------------------------------ shop ------------------------------- */}
-      <div className="shop-band">
+      {/* ------------------------------ hot selling ------------------------------- */}
+      <section className="container section">
+        <div className="section-head">
+          <div>
+            <h2 className="section-title">Hot Selling Items</h2>
+            <p className="section-sub">The pieces people come back for — restocked every week.</p>
+          </div>
+        </div>
+        <div className="grid featured-grid">
+          {hotSelling.map((p) => (
+            <ProductCard product={p} key={p.slug} />
+          ))}
+        </div>
+      </section>
+
+      {/* ------------------------------- bundle deals ----------------------------- */}
+      <section className="container section" id="bulk">
+        <BulkOffer />
+      </section>
+
+      {/* ---------------------------- flagship store ------------------------------ */}
+      <section className="container section">
+        <div className="image-with-text">
+          <div
+            className="image-with-text-photo"
+            style={{ backgroundImage: `url(${asset('/hero/flagship-store.jpg')})` }}
+            role="img"
+            aria-label="Inside the Armaghan Store flagship shop"
+          />
+          <div className="image-with-text-body">
+            <span className="eyebrow">Armaghan Store · Flagship Store</span>
+            <h2>Visit us in Urdu Bazar, Lahore</h2>
+            <p>
+              See and feel the fabric before you buy — our counter at Hadia Haleema Center, Ghazni Street keeps Roman
+              Bosky, Patal Cotton, China Silk, wash &amp; wear and the full ladies collection in every shade. Wholesale
+              and retail both welcome.
+            </p>
+            <p>
+              <strong>
+                {site.addressLine}, {site.city}
+              </strong>
+              <br />
+              {site.hours}
+            </p>
+            <div className="btn-row">
+              <a
+                className="btn btn-wa"
+                href={waLink(`Assalam o Alaikum ${site.name}! I want to visit your shop.`)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp {site.phoneDisplay}
+              </a>
+              <Link className="btn btn-outline" href="/about">
+                About the shop
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --------------------------------- shop ---------------------------------- */}
+      <div className="shop-band" id="shop">
         <div className="container">
           <ShopGrid products={products} />
         </div>
       </div>
 
-      {/* --------------------------- whatsapp cta -------------------------- */}
-      <section className="container section">
-        <div className="wa-banner">
+      {/* -------------------------------- contact -------------------------------- */}
+      <section className="container section" id="contact">
+        <div className="section-head">
           <div>
-            <h2>Not sure about the shade or the size?</h2>
-            <p>
-              Send us a message on {site.phoneDisplay}. We will photograph the fabric in daylight, tell you exactly how
-              much is left, and help you decide before you pay a rupee.
+            <h2 className="section-title">Contact us</h2>
+            <p className="section-sub">
+              Questions about shade, size or stock? Send a message — we reply personally on WhatsApp.
             </p>
           </div>
-          <a
-            className="btn btn-wa btn-lg"
-            href={waLink(
-              `Assalam o Alaikum ${site.name}! Please help me choose a fabric. I am looking for: `,
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Message us on WhatsApp
-          </a>
+        </div>
+        <div className="contact-grid">
+          <ContactForm />
+          <div className="info-card">
+            <h3>{site.name} — {site.arabicName}</h3>
+            <ul className="contact-info">
+              <li>
+                <span aria-hidden="true">📍</span>
+                <span>
+                  {site.addressLine}
+                  <br />
+                  {site.city}, {site.region}, {site.country}
+                </span>
+              </li>
+              <li>
+                <span aria-hidden="true">💬</span>
+                <a href={waLink(`Assalam o Alaikum ${site.name}!`)} target="_blank" rel="noopener noreferrer">
+                  WhatsApp / Phone: {site.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <span aria-hidden="true">🕐</span>
+                <span>{site.hours}</span>
+              </li>
+              <li>
+                <span aria-hidden="true">🚚</span>
+                <span>{site.deliveryNote}</span>
+              </li>
+            </ul>
+            <a
+              className="btn btn-wa btn-block"
+              style={{ marginTop: '1.25rem' }}
+              href={waLink(`Assalam o Alaikum ${site.name}! I would like to ask about your fabric stock and prices.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Message us on WhatsApp
+            </a>
+          </div>
         </div>
       </section>
     </>

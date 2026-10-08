@@ -5,13 +5,14 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { site } from '@/data/site';
 import { useCart } from '@/lib/cart';
-import { waLink } from '@/lib/format';
+import { asset, waLink } from '@/lib/format';
 
 const NAV = [
-  { href: '/', label: 'Shop' },
+  { href: '/', label: 'Home' },
+  { href: '/#collections', label: 'Collections' },
+  { href: '/#shop', label: 'Shop' },
   { href: '/about', label: 'About' },
-  { href: '/refund-policy', label: 'Returns & Refunds' },
-  { href: '/privacy-policy', label: 'Privacy' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -23,14 +24,12 @@ export default function Header() {
     setOpen(false);
   }, [pathname]);
 
-  const isActive = (href) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
-
   return (
     <>
       <div className="topbar">
         <div className="container topbar-inner">
           <span>
-            Free delivery over <strong>Rs {site.freeDeliveryOver.toLocaleString('en-PK')}</strong> · Cash on Delivery available
+            Roman Bosky 3 Suits only <strong>Rs 4,500</strong> · Cash on Delivery across Pakistan
           </span>
           <a
             href={waLink(`Assalam o Alaikum ${site.name}, I have a question about your fabric.`)}
@@ -45,19 +44,14 @@ export default function Header() {
 
       <header className="header">
         <div className="container header-inner">
-          <Link href="/" className="brand" aria-label={`${site.name} home`}>
-            <span className="brand-mark" aria-hidden="true">
-              AS
-            </span>
-            <span className="brand-text">
-              <strong>{site.name}</strong>
-              <small>Kapra &amp; Fabric · {site.city}</small>
-            </span>
+          <Link href="/" className="brand" aria-label={`${site.name} — ${site.arabicName} home`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="brand-logo" src={asset('/logo.svg')} alt={`${site.name} — ${site.arabicName}`} />
           </Link>
 
           <nav className="nav" aria-label="Main">
             {NAV.map((item) => (
-              <Link key={item.href} href={item.href} className={isActive(item.href) ? 'active' : ''}>
+              <Link key={item.href} href={item.href}>
                 {item.label}
               </Link>
             ))}
@@ -73,11 +67,11 @@ export default function Header() {
               Order on WhatsApp
             </a>
             <Link href="/cart" className="cart-btn" aria-label={`Cart, ${count} item${count === 1 ? '' : 's'}`}>
-              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false">
+              <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false">
                 <path
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.9"
+                  strokeWidth="1.7"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20.5 7H6.1"
@@ -108,6 +102,7 @@ export default function Header() {
               </Link>
             ))}
             <Link href="/cart">Cart ({count})</Link>
+            <Link href="/refund-policy">Returns &amp; Refunds</Link>
           </nav>
         )}
       </header>

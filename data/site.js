@@ -4,6 +4,7 @@
 
 export const site = {
   name: 'Armaghan Store',
+  arabicName: 'أرمغان',
   tagline: 'Premium kapra & fabric, honest prices, delivered across Pakistan.',
   owner: 'Qari Ali Husnain Aslam',
 
@@ -12,8 +13,8 @@ export const site = {
   phoneDisplay: '+92 327 4934992',
 
   email: 'hello@armaghanstore.pk', // TODO: replace with your real email
-  addressLine: 'Main Bazaar',
-  city: 'Vihari',
+  addressLine: '21 First Floor, Hadia Haleema Center, Ghazni Street, Urdu Bazar',
+  city: 'Lahore',
   region: 'Punjab',
   country: 'Pakistan',
   hours: 'Monday–Saturday, 10:00 am – 9:00 pm (PKT)',
@@ -69,4 +70,17 @@ export const COLOR_HEX = {
   'Rust': '#a8452a',
   'Cream': '#efe3cd',
   'Powder Blue': '#bcd2e8',
+  'Ivory': '#f5efe0',
+  'Steel Grey': '#6e747a',
+  'Wine': '#722f37',
+  'Olive': '#6b6b3a',
+  'Peach': '#e8b49a',
+  'Sand': '#cdbd99',
+  'Indigo': '#33406e',
+  'Sea Green': '#2e6f5e',
+  'Turquoise': '#3aa6a6',
+  'Chocolate': '#4a2f22',
+  'Rose Pink': '#d78fa3',
+  'Lemon': '#e8d268',
+  'Off Black': '#22242a',
 };

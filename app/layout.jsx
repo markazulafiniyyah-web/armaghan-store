@@ -1,3 +1,4 @@
+import { Assistant } from 'next/font/google';
 import '@/app/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,6 +8,11 @@ import LiveSeo from '@/components/LiveSeo';
 import { site } from '@/data/site';
 import { SITE_ORIGIN, BASE_PATH, KEYWORDS, OG_IMAGE, absoluteUrl } from '@/lib/seo';
 import { storeSchema, websiteSchema } from '@/lib/schema';
+
+const assistant = Assistant({
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL(SITE_ORIGIN),
@@ -75,7 +81,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#123c34',
+  themeColor: '#121212',
   width: 'device-width',
   initialScale: 1,
   colorScheme: 'light',
@@ -83,7 +89,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-PK">
+    <html lang="en-PK" className={assistant.variable}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content
