@@ -45,6 +45,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Form controls inherit the page font instead of the UA default */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
 img,
 svg {
   max-width: 100%;
@@ -1077,16 +1089,29 @@ code {
 }
 
 .search {
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 380px;
-  padding: 0.72rem 1rem;
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  font: inherit;
   background: var(--bg);
+  overflow: hidden;
 }
 
-.search:focus {
+.search input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0.72rem 1rem;
+  font: inherit;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search:focus-within {
   outline: 2px solid var(--ink);
   outline-offset: 1px;
 }
@@ -1128,13 +1153,31 @@ code {
 }
 
 .select {
-  padding: 0.55rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  font: inherit;
-  font-size: 0.88rem;
   background: var(--bg);
   color: var(--ink);
+}
+
+.select select {
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 0.55rem 0.9rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.select select:focus {
+  outline: none;
+}
+
+.select:focus-within {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
 }
 
 /* --------------------------------- trust ---------------------------------- */
@@ -1531,13 +1574,20 @@ code {
 }
 
 .policy-grid,
-.about-grid,
-.two-col {
+.about-grid {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 2.75rem;
   align-items: start;
   padding-bottom: 3.5rem;
+}
+
+/* Form row: two fields side by side (e.g. City + Payment in checkout) */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
 }
 
 .policy-side,
@@ -2032,6 +2082,53 @@ code {
 
 .checkout {
   margin-top: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.checkout h3 {
+  margin: 0.25em 0 0.15em;
+}
+
+.checkout label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.checkout label > span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.checkout input,
+.checkout textarea,
+.checkout select {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.checkout input:focus,
+.checkout textarea:focus,
+.checkout select:focus {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+.checkout textarea {
+  resize: vertical;
+  min-height: 5.5rem;
+}
+
+.checkout .btn-block {
+  margin-top: 0.35rem;
 }
 
 /* -------------------------- product card minis ---------------------------- */
@@ -2181,8 +2278,7 @@ code {
   }
 
   .policy-grid,
-  .about-grid,
-  .two-col {
+  .about-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2221,6 +2317,10 @@ code {
 @media (max-width: 640px) {
   .container {
     width: min(1220px, 100% - 2rem);
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
   }
 
   .usp-grid {
