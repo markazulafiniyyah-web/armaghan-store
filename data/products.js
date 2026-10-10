@@ -84,8 +84,8 @@ export const products = [
     ],
   },
   {
-    slug: 'wash-n-wear-premium',
-    images: ['/products/wash-n-wear-premium-1.jpg'],
+    slug: 'wash-n-wear-fine',
+    images: ['/products/wash-n-wear-fine-1.jpg'],
     name: 'Wash & Wear — Fine Quality Suit',
     category: 'Wash & Wear',
     fabric: 'Wash & wear (fine quality)',

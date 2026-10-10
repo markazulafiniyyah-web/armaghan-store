@@ -10,7 +10,7 @@ plus the visitor's own browser, and every order is handed over to **WhatsApp**.
 | Owner | Qari Ali Husnain Aslam |
 | WhatsApp / phone | [+92 327 4934992](https://wa.me/923274934992) |
 | Currency | PKR (Rs) |
-| Refunds | 20% deduction on change-of-mind refunds — full policy page included |
+| Refunds | 20% cut on change-of-mind refunds — full policy page included |
 
 ---
 
@@ -21,7 +21,7 @@ plus the visitor's own browser, and every order is handed over to **WhatsApp**.
 | `/` | Hero, trust strip, **bulk offer band**, featured pieces, full shop grid with search + category filter + sorting |
 | `/products/[slug]` | Product page: **named colour attributes**, size buttons that show how many pieces are left, live stock counter, Add to cart, *Order on WhatsApp* |
 | `/about` | About page: the shop's story, how we work, how the shop grew, how ordering works |
-| `/refund-policy` | Refund & return policy — includes the **20% deduction** with worked examples |
+| `/refund-policy` | Refund & return policy — includes the **20% cut** with worked examples |
 | `/privacy-policy` | Privacy policy — explains that no data leaves the browser, what is stored locally and for how long |
 | `/cart` | Cart with the **bulk discount applied automatically**, delivery details form → builds a complete WhatsApp order message |
 | `/admin` | Private stock counter (not linked from the shop) to export new stock numbers |
@@ -175,7 +175,7 @@ armaghan-store/
 │  ├─ page.jsx              home + shop grid
 │  ├─ products/[slug]/      product page (pre-rendered for every product)
 │  ├─ about/                about page
-│  ├─ refund-policy/        refund & return policy (20% deduction)
+│  ├─ refund-policy/        refund & return policy (20% cut)
 │  ├─ privacy-policy/       privacy policy
 │  ├─ cart/                 cart + WhatsApp checkout
 │  ├─ admin/                private stock counter / export
@@ -337,7 +337,7 @@ Nothing below is missing from the site — these are the details only you can fi
 ## Notes
 
 * The policies are written for this shop in plain English, based on the details you gave
-  (20% refund deduction, 7-day window, WhatsApp support). If you want different windows or
+  (20% refund cut, 7-day window, WhatsApp support). If you want different windows or
   numbers, change `refundCutPercent`, `refundWindowDays`, `damagedReportHours` and
   `refundProcessing` in `data/site.js` and every page updates itself.
 * Prices, product names and photos in the demo data are placeholders — replace them with your

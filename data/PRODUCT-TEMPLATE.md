@@ -60,5 +60,5 @@ Send me this and I will wire it in:
 2. **Products** — for each: name, fabric type, price (and "was" price if any), colours with
    their exact names, sizes, and how many pieces you have of each colour and size.
 3. **Photos** — one to four per product (WhatsApp photos are fine, daylight shots look best).
-4. **Rules** — delivery fee, free-delivery threshold, and whether the 20% refund deduction and
+4. **Rules** — delivery fee, free-delivery threshold, and whether the 20% refund cut and
    7-day window should stay as they are.
