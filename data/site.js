@@ -5,7 +5,7 @@
 export const site = {
   name: 'Armaghan Store',
   arabicName: 'أرمغان',
-  tagline: 'Premium kapra & fabric, honest prices, delivered across Pakistan.',
+  tagline: 'Good quality kapra & fabric, honest prices, delivered across Pakistan.',
   owner: 'Qari Ali Husnain Aslam',
 
   // WhatsApp: digits only, with country code, no "+" and no spaces.

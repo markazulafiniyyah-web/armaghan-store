@@ -7,8 +7,8 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 export const metadata = buildMetadata({
   path: '/refund-policy/',
-  title: 'Refund & Return Policy — 20% Deduction Explained',
-  description: `${site.name} returns policy: ${site.refundWindowDays}-day return window, full refund when the mistake is ours, and refunds after a ${site.refundCutPercent}% deduction on change-of-mind returns. Worked examples, exchange and store-credit options.`,
+  title: 'Refund & Return Policy — 20% Cut Explained',
+  description: `${site.name} returns policy: ${site.refundWindowDays}-day return window, full refund when the mistake is ours, and refunds after a ${site.refundCutPercent}% cut when you change your mind. Worked examples, exchange and shop credit options.`,
   keywords: KEYWORDS.refund,
 });
 
@@ -19,15 +19,15 @@ const EXAMPLES = [1000, 3450, 6750];
 export const FAQS = [
   {
     q: `Can I get a refund if I change my mind after ordering?`,
-    a: `Yes. Tell us within ${site.refundWindowDays} days of delivery and send the unused piece back in its original packing. Refunds on change-of-mind returns are paid after a ${site.refundCutPercent}% deduction, or you can take an exchange or store credit with no deduction at all.`,
+    a: `Yes. Tell us within ${site.refundWindowDays} days of delivery and send the unused piece back in its original packing. When you change your mind, refunds are paid after a ${site.refundCutPercent}% cut, or you can take an exchange or shop credit with no cut at all.`,
   },
   {
-    q: 'How much is deducted on a refund?',
-    a: `A flat ${site.refundCutPercent}% of the item price is deducted on change-of-mind returns. On a Rs 1,000 item that is Rs 200, so you receive Rs 800. The deduction covers courier charges both ways, packing and handling. It is not applied when the mistake is ours.`,
+    q: 'How much is kept on a refund?',
+    a: `A flat ${site.refundCutPercent}% of the item price is kept when you return after changing your mind. On a Rs 1,000 item that is Rs 200, so you receive Rs 800. The cut covers courier charges both ways, packing and handling. It is not applied when the mistake is ours.`,
   },
   {
-    q: 'When is the refund paid in full, without any deduction?',
-    a: 'When we sent the wrong colour, size or product, when the item arrived damaged or faulty, or when we had to cancel the order ourselves — then you get a full refund or a free replacement, no deduction.',
+    q: 'When is the refund paid in full, without any cut?',
+    a: 'When we sent the wrong colour, size or product, when the item arrived damaged or faulty, or when we had to cancel the order ourselves — then you get a full refund or a free replacement, no cut.',
   },
   {
     q: 'What can I return and what cannot be returned?',
@@ -43,7 +43,7 @@ export const FAQS = [
   },
   {
     q: 'Can I cancel my order?',
-    a: 'Yes, free of charge any time before the parcel is posted. After posting, a cancellation is treated as a change-of-mind return, so the 20% deduction applies.',
+    a: 'Yes, free of charge any time before the parcel is posted. After posting, a cancellation is treated as a return when you change your mind, so the 20% cut applies.',
   },
 ];
 
@@ -75,8 +75,8 @@ export default function RefundPolicyPage() {
         <h1>Refund &amp; return policy</h1>
         <p className="lede">
           We want you to be happy with your fabric. If something is wrong, tell us quickly and we will settle it —
-          either by exchange, by store credit, or by a refund. Refunds are paid after a{' '}
-          <strong>{site.refundCutPercent}% deduction</strong>, which covers the courier, packing and handling costs of
+          either by exchange, as shop credit to use later, or as a refund. Refunds are paid after a{' '}
+          <strong>{site.refundCutPercent}% cut</strong>, which covers the courier, packing and handling costs of
           sending the goods out and bringing them back.
         </p>
         <p className="muted small">Applies to all orders placed with {site.name} through this website, WhatsApp or the shop counter.</p>
@@ -113,32 +113,32 @@ export default function RefundPolicyPage() {
                 <tbody>
                   <tr>
                     <td>Wrong colour, size or product sent by us</td>
-                    <td>Full refund (no deduction) or free replacement — your choice</td>
+                    <td>Full refund (no cut) or free replacement — your choice</td>
                   </tr>
                   <tr>
                     <td>Item arrived damaged or faulty</td>
-                    <td>Full refund (no deduction) or free replacement — your choice</td>
+                    <td>Full refund (no cut) or free replacement — your choice</td>
                   </tr>
                   <tr>
                     <td>You changed your mind / no longer want it</td>
                     <td>
-                      Refund after a <strong>{site.refundCutPercent}% deduction</strong>, or exchange / store credit
-                      with <strong>no deduction</strong>
+                      Refund after a <strong>{site.refundCutPercent}% cut</strong>, or exchange or shop credit
+                      with <strong>no cut</strong>
                     </td>
                   </tr>
                   <tr>
                     <td>Wrong colour or size ordered by mistake</td>
                     <td>
-                      Exchange, or refund after a <strong>{site.refundCutPercent}% deduction</strong>
+                      Exchange, or refund after a <strong>{site.refundCutPercent}% cut</strong>
                     </td>
                   </tr>
                   <tr>
                     <td>Item was cut, stitched, washed or altered</td>
-                    <td>Not returnable or refundable</td>
+                    <td>Cannot be returned or exchanged</td>
                   </tr>
                   <tr>
                     <td>Custom stitching to your measurements</td>
-                    <td>Not returnable or refundable</td>
+                    <td>Cannot be returned or exchanged</td>
                   </tr>
                 </tbody>
               </table>
@@ -146,11 +146,11 @@ export default function RefundPolicyPage() {
           </section>
 
           <section>
-            <h2>3. How the {site.refundCutPercent}% deduction works</h2>
+            <h2>3. How the {site.refundCutPercent}% cut works</h2>
             <p>
-              When you ask for a refund on a change-of-mind return, {site.refundCutPercent}% of the amount you paid for
-              that item is deducted. The remaining {100 - site.refundCutPercent}% is paid back to you. The deduction
-              covers courier charges both ways, packing material, and the staff time spent processing and re-checking
+              When you ask for a refund after changing your mind, {site.refundCutPercent}% of the amount you paid for
+              that item is kept. The remaining {100 - site.refundCutPercent}% is paid back to you. The cut
+              covers courier charges both ways, packing material, and the staff time spent handling and re-checking
               the goods. It does <strong>not</strong> apply when the mistake was ours.
             </p>
             <div className="table-wrap">
@@ -158,7 +158,7 @@ export default function RefundPolicyPage() {
                 <thead>
                   <tr>
                     <th>Item price</th>
-                    <th>Deduction ({site.refundCutPercent}%)</th>
+                    <th>Cut ({site.refundCutPercent}%)</th>
                     <th>You receive</th>
                   </tr>
                 </thead>
@@ -185,11 +185,11 @@ export default function RefundPolicyPage() {
             <ul className="tick-list">
               <li>
                 <strong>Exchange</strong> — swap for another colour, size or fabric of equal or higher value (you pay
-                any difference). No deduction.
+                any difference). No cut.
               </li>
               <li>
-                <strong>Store credit</strong> — the full value is held for you as credit, valid for{' '}
-                <strong>6 months</strong>, usable in the shop or online. No deduction.
+                <strong>Shop credit</strong> — we keep the full money with us, and you can spend it any time for{' '}
+                <strong>6 months</strong>, usable in the shop or online. No cut.
               </li>
               <li>
                 <strong>Partial refund</strong> — if you keep the item but want a price adjustment for a small defect,
@@ -216,7 +216,7 @@ export default function RefundPolicyPage() {
               </li>
               <li>
                 Approved refunds are paid within <strong>{site.refundProcessing}</strong> by bank transfer, JazzCash /
-                Easypaisa, or as store credit if you prefer.
+                Easypaisa, or as shop credit to use later if you prefer.
               </li>
             </ol>
           </section>
@@ -226,12 +226,12 @@ export default function RefundPolicyPage() {
             <ul className="tick-list">
               <li>You can cancel free of charge any time before your parcel is posted.</li>
               <li>
-                Once posted, cancelling counts as a change-of-mind return, so the {site.refundCutPercent}% deduction
+                Once posted, cancelling counts as a return when you change your mind, so the {site.refundCutPercent}% cut
                 applies — or refuse the parcel and contact us so we can process it.
               </li>
               <li>
                 If we ever have to cancel your order (stock finished, fabric flawed), you are refunded{' '}
-                <strong>in full, with no deduction</strong>, and we will suggest a similar item if you like.
+                <strong>in full, with no cut</strong>, and we will suggest a similar item if you like.
               </li>
             </ul>
           </section>
@@ -242,8 +242,8 @@ export default function RefundPolicyPage() {
               <li>{site.refundWindowDays} days to raise a return.</li>
               <li>Unused and uncut only, in original packing.</li>
               <li>
-                Our mistake → full refund, no deduction. Your change of mind → refund with a{' '}
-                {site.refundCutPercent}% deduction, or exchange / credit with none.
+                Our mistake → full refund, no cut. Your change of mind → refund with a{' '}
+                {site.refundCutPercent}% cut, or exchange or shop credit with no cut.
               </li>
               <li>Refund paid within {site.refundProcessing} of approval.</li>
             </ul>
@@ -287,19 +287,19 @@ export default function RefundPolicyPage() {
                 <dd>{site.damagedReportHours} hours</dd>
               </div>
               <div>
-                <dt>Refund deduction</dt>
+                <dt>Refund cut</dt>
                 <dd>{site.refundCutPercent}% (not our fault cases)</dd>
               </div>
               <div>
-                <dt>Exchange / credit</dt>
-                <dd>No deduction</dd>
+                <dt>Exchange / shop credit</dt>
+                <dd>No cut</dd>
               </div>
               <div>
                 <dt>Refund paid in</dt>
                 <dd>{site.refundProcessing}</dd>
               </div>
               <div>
-                <dt>Credit valid for</dt>
+                <dt>Shop credit valid for</dt>
                 <dd>6 months</dd>
               </div>
             </dl>

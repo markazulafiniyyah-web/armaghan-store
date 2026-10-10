@@ -65,7 +65,7 @@ export default function CartView() {
       `Payment: ${form.payment}`,
       form.notes ? `Notes: ${form.notes}` : '',
       '',
-      `I have read the returns policy (refunds carry a ${site.refundCutPercent}% deduction).`,
+      `I have read the returns policy (refunds carry a ${site.refundCutPercent}% cut).`,
     ];
     return lines.filter(Boolean).join('\n');
   }
@@ -319,7 +319,7 @@ export default function CartView() {
               <p className="muted tiny">
                 Nothing is charged here. Your order is written into a WhatsApp message to {site.phoneDisplay} and we
                 confirm it with you before packing. Bulk discounts (up to {site.bulkTiers[site.bulkTiers.length - 1].percent}%)
-                are applied automatically above. Refunds are subject to a {site.refundCutPercent}% deduction as per the{' '}
+                are applied automatically above. Refunds are subject to a {site.refundCutPercent}% cut as per the{' '}
                 <Link href="/refund-policy">returns policy</Link>.
               </p>
             </form>

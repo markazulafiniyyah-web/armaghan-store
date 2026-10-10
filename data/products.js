@@ -43,7 +43,7 @@ export const products = [
     ],
     care: 'Gentle hand wash or dry clean the first time. Iron on medium heat, inside out.',
     colors: ['Boski Cream', 'Off White'],
-    sizes: ['2.5 m', '4 m', '4.5 m'],
+    sizes: ['2.5 m (shirt)', '4 m (shirt + shalwar)', '4.5 m (full suit)'],
     stock: [
       [12, 9, 7], // Boski Cream
       [8, 6, 4], // Off White
@@ -73,7 +73,7 @@ export const products = [
     ],
     care: 'Machine wash, hang to dry, light iron if needed.',
     colors: ['Steel Grey', 'Navy Blue', 'Charcoal Grey', 'Indigo', 'Black', 'Taupe'],
-    sizes: ['2.5 m', '4 m', '4.5 m'],
+    sizes: ['2.5 m (shirt)', '4 m (shirt + shalwar)', '4.5 m (full suit)'],
     stock: [
       [12, 9, 7], // Steel Grey
       [14, 10, 8], // Navy Blue
@@ -105,7 +105,7 @@ export const products = [
     ],
     care: 'Machine wash, hang to dry, medium iron.',
     colors: ['Charcoal Grey', 'Olive', 'Black', 'Taupe', 'Navy Blue', 'Maroon'],
-    sizes: ['2.5 m', '4 m', '4.5 m'],
+    sizes: ['2.5 m (shirt)', '4 m (shirt + shalwar)', '4.5 m (full suit)'],
     stock: [
       [12, 9, 7], // Charcoal Grey
       [9, 7, 5], // Olive
@@ -139,7 +139,7 @@ export const products = [
     ],
     care: 'Machine wash warm, dry in shade, hot iron.',
     colors: ['Off White', 'Sand', 'Peach', 'Sage', 'Powder Blue', 'Dusty Rose', 'Mustard', 'Navy Blue'],
-    sizes: ['2.5 m', '4 m', '4.5 m'],
+    sizes: ['2.5 m (shirt)', '4 m (shirt + shalwar)', '4.5 m (full suit)'],
     stock: [
       [12, 9, 7], // Off White
       [10, 8, 6], // Sand

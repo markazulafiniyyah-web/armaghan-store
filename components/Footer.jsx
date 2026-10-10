@@ -102,7 +102,7 @@ export default function Footer() {
           © {year} {site.name} ({site.arabicName}). All rights reserved.
         </span>
         <span>
-          Refunds are subject to a {site.refundCutPercent}% deduction —{' '}
+          Refunds are subject to a {site.refundCutPercent}% cut —{' '}
           <Link href="/refund-policy">read the policy</Link>.
         </span>
       </div>

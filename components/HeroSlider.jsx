@@ -24,7 +24,7 @@ const SLIDES = [
     image: '/hero/slide-cotton.jpg',
     eyebrow: 'Wash & Wear · Pure Cotton',
     title: 'Wash & Wear from Rs 2,400',
-    text: 'Winter-weight wash & wear at Rs 2,400, premium at Rs 3,300 and 100% pure cotton at Rs 3,300 — all colours available.',
+    text: 'Warm winter wash & wear at Rs 2,400, fine quality at Rs 3,300 and 100% pure cotton at Rs 3,300 — all colours available.',
     cta: { label: 'View wash & wear', href: '/collection/wash-wear' },
   },
 ];

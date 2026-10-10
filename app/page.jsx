@@ -15,13 +15,13 @@ import { SITE_ORIGIN } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/',
   title: `Fabric Shop in ${site.city} — Boski, Wash & Wear & Pure Cotton`,
-  description: `Buy kapra online from ${site.name} (${site.arabicName}) — Boski winter & summer Rs 3,000, wash & wear winter Rs 2,400, premium wash & wear Rs 3,300, 100% pure cotton Rs 3,300. All colours available. Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
+  description: `Buy kapra online from ${site.name} (${site.arabicName}) — Boski winter & summer Rs 3,000, wash & wear winter Rs 2,400, fine quality wash & wear Rs 3,300, 100% pure cotton Rs 3,300. All colours available. Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
   keywords: KEYWORDS.home,
 });
 
 const COLLECTION_TILES = [
   { category: 'Boski', image: '/products/boski-12-pound-1.jpg', note: 'Winter & summer · Rs 3,000' },
-  { category: 'Wash & Wear', image: '/products/wash-n-wear-winter-1.jpg', note: 'Winter Rs 2,400 · Premium Rs 3,300' },
+  { category: 'Wash & Wear', image: '/products/wash-n-wear-winter-1.jpg', note: 'Winter Rs 2,400 · Fine Quality Rs 3,300' },
   { category: 'Pure Cotton', image: '/products/pure-cotton-1.jpg', note: 'All colours · Rs 3,300' },
 ];
 

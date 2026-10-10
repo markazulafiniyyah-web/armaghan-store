@@ -89,7 +89,7 @@ export default function ProductDetail({ product, related }) {
       url ? `Product link: ${url}` : '',
       '',
       'Please confirm the stock and delivery time.',
-      `(I understand refunds carry a ${site.refundCutPercent}% deduction as per your return policy.)`,
+      `(I understand refunds carry a ${site.refundCutPercent}% cut as per your return policy.)`,
     ]
       .filter(Boolean)
       .join('\n');
@@ -294,7 +294,7 @@ export default function ProductDetail({ product, related }) {
           <ul className="pdp-facts">
             <li>{site.deliveryNote}</li>
             <li>
-              Refunds are settled after a {site.refundCutPercent}% deduction —{' '}
+              Refunds are settled after a {site.refundCutPercent}% cut —{' '}
               <Link href="/refund-policy">see how it works</Link>.
             </li>
             <li>Delivery within {site.city}: {formatPKR(site.deliveryFee)} · free over {formatPKR(site.freeDeliveryOver)}</li>

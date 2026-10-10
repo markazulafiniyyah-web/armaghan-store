@@ -27,7 +27,7 @@ const VALUES = [
   },
   {
     title: 'Fair on returns',
-    text: `If something is not right, we settle it. Our policy is short and readable, including the ${site.refundCutPercent}% deduction on refunds.`,
+    text: `If something is not right, we settle it. Our policy is short and readable, including the ${site.refundCutPercent}% cut on refunds.`,
   },
 ];
 
@@ -169,7 +169,7 @@ export default function AboutPage() {
               <li>Stitching can be arranged for unstitched suits.</li>
               <li>
                 {site.refundWindowDays}-day returns on unused goods — refunds carry a {site.refundCutPercent}%
-                deduction.
+                cut.
               </li>
               <li>
                 <Link href="/privacy-policy">Privacy policy</Link> and{' '}
