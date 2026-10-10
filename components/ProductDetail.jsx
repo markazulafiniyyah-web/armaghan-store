@@ -284,7 +284,7 @@ export default function ProductDetail({ product, related }) {
           {soldOut ? (
             <p className="callout callout-warn">
               This colour and size is finished for now. Message us on WhatsApp — we can often arrange the same fabric
-              from our next lot.
+              from our next batch.
             </p>
           ) : null}
           {flash ? <p className="callout callout-ok">{flash}</p> : null}

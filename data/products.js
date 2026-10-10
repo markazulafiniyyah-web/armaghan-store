@@ -95,7 +95,7 @@ export const products = [
     featured: true,
     short: 'Fine quality wash & wear — thicker, smoother and longer lasting. All colours, Rs 3,300.',
     description:
-      'The fine quality of wash & wear — thicker and smoother than the standard cloth, and it lasts longer. The press stays all day, the colour stays wash after wash and it does not shrink. This is the one regulars keep coming back for. All colours available. Sold unstitched as a full suit piece.',
+      'The fine quality of wash & wear — thicker and smoother than the standard cloth, and it lasts longer. It stays neat all day after ironing, the colour stays wash after wash and it does not shrink. This is the one regulars keep coming back for. All colours available. Sold unstitched as a full suit piece.',
     highlights: [
       'Fine quality wash & wear',
       'All colours available',
@@ -129,7 +129,7 @@ export const products = [
     featured: true,
     short: '100% pure cotton in all colours — soft, airy and easy on the skin. Rs 3,300.',
     description:
-      'Real 100% pure cotton — no mixing, no shortcuts. It is soft, lets the skin breathe and gets softer with every wash. The full colour range is on the shelf, from light pastels to deep navy and black. Sold unstitched as a full suit piece with matching trouser length.',
+      'Real 100% pure cotton — no mixing, no shortcuts. It is soft, lets the skin breathe and gets softer with every wash. The full colour range is on the shelf, from light soft colours to deep navy and black. Sold unstitched as a full suit piece with matching trouser length.',
     highlights: [
       '100% pure cotton — no mixing',
       'All colours available',

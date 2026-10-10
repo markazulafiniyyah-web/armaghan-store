@@ -88,7 +88,7 @@ export default function CollectionPage({ params }) {
             <h2>Looking for something in {category.toLowerCase()} that is not here?</h2>
             <p>
               We keep more in the shop than on the website. Send us a message at {site.phoneDisplay} and we will check
-              the shelf and the next lot for you.
+              the shelf and the next batch for you.
             </p>
           </div>
           <a

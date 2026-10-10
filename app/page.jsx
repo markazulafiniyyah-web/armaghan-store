@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
 
 const COLLECTION_TILES = [
   { category: 'Boski', image: '/products/boski-12-pound-1.jpg', note: 'Winter & summer · Rs 3,000' },
-  { category: 'Wash & Wear', image: '/products/wash-n-wear-winter-1.jpg', note: 'Winter Rs 2,400 · Fine Quality Rs 3,300' },
+  { category: 'Wash & Wear', image: '/products/wash-n-wear-winter-1.jpg', note: 'Winter Rs 2,400 · Fine quality Rs 3,300' },
   { category: 'Pure Cotton', image: '/products/pure-cotton-1.jpg', note: 'All colours · Rs 3,300' },
 ];
 
