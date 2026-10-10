@@ -15,9 +15,9 @@ const SLIDES = [
   },
   {
     image: '/hero/slide-bosky.jpg',
-    eyebrow: 'Boski · 12 Pound AAA',
+    eyebrow: 'Boski · Original 12 Pound',
     title: 'Boski — Winter & Summer',
-    text: 'AAA-grade 12 pound Boski that stays cool in summer and carries through winter. Rs 3,000 only.',
+    text: 'Original 12 pound Boski that stays cool in summer and carries through winter. Rs 3,000 only.',
     cta: { label: 'Buy Boski', href: '/products/boski-winter-summer' },
   },
   {

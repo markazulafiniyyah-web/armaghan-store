@@ -15,9 +15,9 @@ export function generateStaticParams() {
 /** Short intro written per category so every collection page has real content. */
 const INTROS = {
   Boski:
-    'AAA-grade Boski in the 12 pound lot — creamy, smooth and comfortable in both winter and summer. Sold as full unstitched suit pieces at Rs 3,000.',
+    'Original 12 pound Boski — creamy, smooth and comfortable in both winter and summer. Sold as full unstitched suit pieces at Rs 3,000.',
   'Wash & Wear':
-    'Wrinkle-resistant wash & wear suiting — winter weight at Rs 2,400 and the premium grade at Rs 3,300. All colours available.',
+    'Wash & wear suiting that hardly needs ironing — warm winter fabric at Rs 2,400 and fine quality at Rs 3,300. All colours available.',
   'Pure Cotton':
     '100% pure cotton suit fabric in the full colour range — breathable, honest fabric at Rs 3,300, softening with every wash.',
 };

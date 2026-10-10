@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 const VALUES = [
   {
     title: 'Fabric first',
-    text: 'We buy in small lots and sell what we can stand behind. If a weave will not survive a wash or a season, it does not go on the shelf.',
+    text: 'We buy in small lots and sell what we can stand behind. If a fabric will not survive a wash or a season, it does not go on the shelf.',
   },
   {
     title: 'Numbers on the label',

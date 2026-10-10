@@ -322,7 +322,7 @@ exactly as they are.
 Nothing below is missing from the site — these are the details only you can fill in:
 
 - [ ] `data/site.js` — your real email, exact street address, opening hours, social links
-- [x] **China Boski — 12 Pound (AAA Grade), Rs 3,000** is live with brand photos, colour
+- [x] **Boski — Winter & Summer (12 Pound), Rs 3,000** is live with brand photos, colour
       attribute *Boski Cream* and sizes 2.5 m / 4 m / 4.5 m — only the stock counts are placeholders
       (10 / 6 / 4), set them in `/admin`
 - [ ] `data/products.js` — replace the remaining 9 demo products with your items (name, fabric,

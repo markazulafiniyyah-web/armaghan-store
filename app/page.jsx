@@ -34,7 +34,7 @@ const USP = [
   {
     icon: '✅',
     title: '100% Guaranteed Original',
-    text: 'Original AAA Boski, quality wash & wear and 100% pure cotton — no copies.',
+    text: 'Original Boski, quality wash & wear and 100% pure cotton — no copies.',
   },
   {
     icon: '💬',
