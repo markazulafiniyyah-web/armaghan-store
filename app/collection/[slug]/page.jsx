@@ -14,14 +14,12 @@ export function generateStaticParams() {
 
 /** Short intro written per category so every collection page has real content. */
 const INTROS = {
-  'Men – Unstitched':
-    'Suit pieces, shirting and wash & wear bought by the length — pick your fabric, then get it stitched to your own measurement.',
-  'Men – Stitched':
-    'Kurtas and two-piece suits stitched in our own unit, finished neatly and ready to wear out of the bag.',
-  'Women – Unstitched':
-    'Lawn, cambric and embroidered three-piece suits with matching dupattas, unstitched so you choose the cut.',
-  Kidswear: 'Soft cotton two-pieces for kids, cut roomy so they last the season.',
-  Accessories: 'The everyday extras — handkerchief sets, quick add-ons and small gifts.',
+  Boski:
+    'AAA-grade Boski in the 12 pound lot — creamy, smooth and comfortable in both winter and summer. Sold as full unstitched suit pieces at Rs 3,000.',
+  'Wash & Wear':
+    'Wrinkle-resistant wash & wear suiting — winter weight at Rs 2,400 and the premium grade at Rs 3,300. All colours available.',
+  'Pure Cotton':
+    '100% pure cotton suit fabric in the full colour range — breathable, honest fabric at Rs 3,300, softening with every wash.',
 };
 
 export function generateMetadata({ params }) {

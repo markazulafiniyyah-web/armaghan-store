@@ -14,18 +14,15 @@ import { SITE_ORIGIN } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/',
-  title: `Wholesale Fabric Supplier in ${site.city} — Roman Bosky, Patal Cotton & More`,
-  description: `Buy kapra online from ${site.name} (${site.arabicName}) — Roman Bosky from Rs 1,599, 3-suit bundle Rs 4,500, Patal Cotton, original China Silk Bosky, wash & wear and ladies collection. Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
+  title: `Fabric Shop in ${site.city} — Boski, Wash & Wear & Pure Cotton`,
+  description: `Buy kapra online from ${site.name} (${site.arabicName}) — Boski winter & summer Rs 3,000, wash & wear winter Rs 2,400, premium wash & wear Rs 3,300, 100% pure cotton Rs 3,300. All colours available. Cash on Delivery across Pakistan. WhatsApp ${site.phoneDisplay}.`,
   keywords: KEYWORDS.home,
 });
 
 const COLLECTION_TILES = [
-  { category: 'Roman Bosky', image: '/products/roman-bosky-1.jpg', note: 'From Rs 1,599 · 60+ colours' },
-  { category: 'Bundles & Deals', image: '/hero/slide-bosky.jpg', note: '2 suits Rs 3,100 · 3 Rs 4,500 · 4 Rs 5,900' },
-  { category: 'Cotton Suiting', image: '/products/patal-cotton-1.jpg', note: 'Patal Cotton · Alpine · Khaddar' },
-  { category: 'Wash & Wear', image: '/products/royal-wash-n-wear-1.jpg', note: 'Shahi Toyobo & Royal wash & wear' },
-  { category: 'Ladies Collection', image: '/products/embroidered-bosky-1.jpg', note: 'Lawn, cambric & hand embroidery' },
-  { category: 'Boski & Silk', image: '/products/china-silk-1.jpg', note: 'China Bosky 12 pound & China Silk' },
+  { category: 'Boski', image: '/products/boski-12-pound-1.jpg', note: 'Winter & summer · Rs 3,000' },
+  { category: 'Wash & Wear', image: '/products/wash-n-wear-winter-1.jpg', note: 'Winter Rs 2,400 · Premium Rs 3,300' },
+  { category: 'Pure Cotton', image: '/products/pure-cotton-1.jpg', note: 'All colours · Rs 3,300' },
 ];
 
 const USP = [
@@ -37,7 +34,7 @@ const USP = [
   {
     icon: '✅',
     title: '100% Guaranteed Original',
-    text: 'Original China Silk, Roman Bosky and pure Patal cotton — no copies.',
+    text: 'Original AAA Boski, quality wash & wear and 100% pure cotton — no copies.',
   },
   {
     icon: '💬',
@@ -137,9 +134,9 @@ export default function HomePage() {
             <span className="eyebrow">Armaghan Store · Flagship Store</span>
             <h2>Visit us in Urdu Bazar, Lahore</h2>
             <p>
-              See and feel the fabric before you buy — our counter at Hadia Haleema Center, Ghazni Street keeps Roman
-              Bosky, Patal Cotton, China Silk, wash &amp; wear and the full ladies collection in every shade. Wholesale
-              and retail both welcome.
+              See and feel the fabric before you buy — our counter at Hadia Haleema Center, Ghazni Street keeps Boski,
+              wash &amp; wear and 100% pure cotton in every colour, winter and summer stock both. Wholesale and retail
+              both welcome.
             </p>
             <p>
               <strong>

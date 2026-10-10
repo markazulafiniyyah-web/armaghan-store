@@ -34,7 +34,7 @@ const VALUES = [
 const MILESTONES = [
   ['Early days', `A single counter in ${site.city} with three bolts of fabric and a lot of tea.`],
   ['Growing', 'Regular customers from nearby towns started asking us to send fabric by bus and courier.'],
-  ['Stitching', 'We added ready-to-wear kurta, suits and kidswear stitched in our own unit.'],
+  ['Range', 'We widened the counter to Boski, wash & wear and pure cotton — winter and summer stock both kept.'],
   ['Today', 'The website carries our live stock, and WhatsApp keeps us one message away from every customer.'],
 ];
 

@@ -83,4 +83,6 @@ export const COLOR_HEX = {
   'Rose Pink': '#d78fa3',
   'Lemon': '#e8d268',
   'Off Black': '#22242a',
+  'Sage': '#a9b5a0',
+  'Taupe': '#a2958a',
 };

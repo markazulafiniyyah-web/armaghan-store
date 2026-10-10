@@ -29,7 +29,8 @@ export default function Header() {
       <div className="topbar">
         <div className="container topbar-inner">
           <span>
-            Roman Bosky 3 Suits only <strong>Rs 4,500</strong> · Cash on Delivery across Pakistan
+            Boski <strong>Rs 3,000</strong> · Wash &amp; Wear from <strong>Rs 2,400</strong> · All colours · Cash on
+            Delivery across Pakistan
           </span>
           <a
             href={waLink(`Assalam o Alaikum ${site.name}, I have a question about your fabric.`)}

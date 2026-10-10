@@ -7,25 +7,25 @@ import { asset, waLink } from '@/lib/format';
 
 const SLIDES = [
   {
-    image: '/hero/slide-bosky.jpg',
-    eyebrow: 'Wholesale & retail fabric',
-    title: 'Galaxy of Premium Attires',
-    text: 'Roman Bosky, Patal Cotton, China Silk & more — 200+ qualities for gents and ladies, only at Armaghan Store.',
+    image: '/hero/colour-range.jpg',
+    eyebrow: 'Armaghan Store · Urdu Bazar, Lahore',
+    title: 'All Colours, Honest Prices',
+    text: 'Boski, wash & wear and pure cotton — the full colour range at the counter and online, delivered across Pakistan.',
     cta: { label: 'Shop now', href: '/#shop' },
   },
   {
-    image: '/hero/slide-cotton.jpg',
-    eyebrow: 'Patal Cotton · 100% pure',
-    title: 'Authentic Cotton You Can Afford',
-    text: '100% pure Patal cotton — breathable, honest fabric at Rs 2,350 only. Delivered anywhere in Pakistan.',
-    cta: { label: 'Buy Patal Cotton', href: '/products/patal-cotton-pure' },
+    image: '/hero/slide-bosky.jpg',
+    eyebrow: 'Boski · 12 Pound AAA',
+    title: 'Boski — Winter & Summer',
+    text: 'AAA-grade 12 pound Boski that stays cool in summer and carries through winter. Rs 3,000 only.',
+    cta: { label: 'Buy Boski', href: '/products/boski-winter-summer' },
   },
   {
-    image: '/products/embroidered-bosky-1.jpg',
-    eyebrow: 'Hand-Made Embroidery',
-    title: 'Hand-Embroidered Bosky',
-    text: 'Exquisite hand embroidery on premium Bosky fabric, crafted in Pakistan — wedding, Eid and formal wear.',
-    cta: { label: 'View the design', href: '/products/hand-made-embroidery-bosky' },
+    image: '/hero/slide-cotton.jpg',
+    eyebrow: 'Wash & Wear · Pure Cotton',
+    title: 'Wash & Wear from Rs 2,400',
+    text: 'Winter-weight wash & wear at Rs 2,400, premium at Rs 3,300 and 100% pure cotton at Rs 3,300 — all colours available.',
+    cta: { label: 'View wash & wear', href: '/collection/wash-wear' },
   },
 ];
 

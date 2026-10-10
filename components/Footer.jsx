@@ -70,7 +70,7 @@ export default function Footer() {
 
         <div className="footer-newsletter">
           <h4>Subscribe to our emails</h4>
-          <p>New arrivals, bundle deals and seasonal fabrics — straight to your inbox.</p>
+          <p>New colours, winter stock and seasonal fabrics — straight to your inbox.</p>
           <form
             className="newsletter"
             action={`https://wa.me/${site.whatsappNumber}`}
